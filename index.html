@@ -1,0 +1,221 @@
+
+<!-- 
+<?php
+
+error_reporting ( E_ALL ^ E_WARNING );
+$conexao = mysqli_connect("localhost", "root", "", "portfolio");
+
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$telefone = $_POST['telefone'];
+$mensagem = $_POST['mensagem'];
+
+$sql = "INSERT INTO portfolio.dados(nome, email, telefone, mensagem) values('$nome', '$email', '$telefone', '$mensagem')";
+$resultado = mysqli_query($conexao, $sql);
+
+?>
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="img/Logo_MGL2.png">
+
+    <script src="menu.js" defer></script>
+
+    <title>Agência MGL</title>
+</head>
+<body>
+
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="">
+                    <img src="img/Logo_MGL2.png" alt="Logo Agência MGL">
+                </a>
+            </div><!--logo-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="#contato">
+                    <button>Contato</button>
+                </a>
+            </div>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="overlay-menu" id="overlay-menu"></div>
+
+        </div><!--interface-->
+    </header>
+
+
+    <main>
+        <section class="topo-site" id="home">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1><span>MIGUEL</span> <span class="txt-animado typing-animation">KURCHEVSKI GUTIERREZ</span></h1>
+                        <p>Desenvolvedor Júnior - Criando experiências excepcionais por meio da programação e desenvolvimento! 
+                            Com habilidade e paixão, transformo ideias em soluções digitais inovadoras, utilizando não apenas habilidades técnicas, 
+                            mas também uma abordagem criativa que vai além do simples código. Comprometo-me a não apenas desenvolver, 
+                            mas a narrar digitalmente, criando experiências envolventes que superam expectativas. 
+                            Minha missão é construir o futuro digital, unindo precisão técnica com visão artística, 
+                            resultando em soluções que não apenas funcionam, mas também inspiram e encantam. 
+                            Convido você a explorar comigo o fascinante mundo da tecnologia, onde cada linha de código 
+                            representa um passo em direção a uma jornada de inovação e excelência.</p>
+                        
+                            <div class="btn-contato">
+                                <a href="#contato">
+                                    <button>Entre em contato</button>
+                                </a>
+                            </div>
+                    </div>
+
+                    <div class="img-topo-site">
+                        <img src="img/pessoaoficial.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="especialidades" id="skills">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>SKILLS.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="fa-brands fa-java"></i>
+                        <h3>Java</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                    <div class="especialidades-box">
+                        <i class="fa-brands fa-python"></i>
+                        <h3>Python</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                    <div class="especialidades-box">
+                        <i class="fa-brands fa-js"></i>
+                        <h3>Javascript</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="img/eu.png" alt="">
+                    </div>
+
+                    <div class="txt-sobre">
+                        <h2>PRAZER, <span>ME CHAMO MIGUEL GUTIERREZ</span></h2>
+                        <p> Tenho 18 anos e atualmente curso Ciências da Computação na FURB. Sou um Desenvolvedor Júnior, tendo iniciado na área da programação no ano de 2023.
+                            Atualmente possuo foco em desenvolvimento com Java, Javascript, Python, HTML e CSS, dentre outras tecnologias.</p>
+                        <p>Me considero uma pessoa ágil, esforçada e consistente quando se trata de aprender uma nova linguagem. Além disso, consigo me adaptar facilmente à mudanças, pronto para superar qualquer desafio!
+                            Sonho em trabalhar na área da tecnologia e principalmente na área da programação. Atualmente estou à procura de um Emprego/Estágio pois acredito que nesse início de carreira o que mais importa é o aprendizado.
+                            Se pudesse me descrever em 3 palavras, seriam: otimista, persistente e esforçado.</p>
+                        <div class="btn-social">
+                            <a href="https://github.com/kurch00"><button><i class="fa-brands fa-github"></i></button></a>
+                            <a href="https://www.linkedin.com/in/miguel-gutierrez-612a83297/"><button><i class="fa-brands fa-linkedin"></i></button></a>
+                            <a href="https://www.instagram.com/miguelkgutierrez/"><button><i class="fa-brands fa-instagram"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projetos" id="projetos">
+            <div class="interface">
+                <h2 class="titulo">MEUS <span>PROJETOS.</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(projetos/automacao-no-whatsapp.jpg);">
+                        <div class="overlay">Automação de Whatsapp</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(projetos/chat.png);">
+                        <div class="overlay">Chat</div>
+                    </div>
+                    <div class="img-port" style=" background-image: url(projetos/gerador\ de\ senhas.png);">
+                        <div class="overlay">Gerador e armazenador de senhas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario" id="contato">
+            <div class="interface">
+                <h2 class="titulo">ENTRE <span>EM CONTATO</span></h2>
+
+                <form method="POST">
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo" required>
+                    <input type="text" name="email" id="email" placeholder="E-mail" required>
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone">
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua Mensagem" required></textarea>
+                    <div class="btn-enviar"><a href="index.html"></a><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="img/Logo_MGL2.png" alt="">
+                    </div>
+                    <div class="btn-social">
+                        <a href="https://github.com/kurch00"><button><i class="fa-brands fa-github"></i></button></a>
+                        <a href="https://www.linkedin.com/in/miguel-gutierrez-612a83297/"><button><i class="fa-brands fa-linkedin"></i></button></a>
+                        <a href="https://www.instagram.com/miguelkgutierrez/"><button><i class="fa-brands fa-instagram"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line-footer borda">
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:miguelkguti@gmail.com">miguelkguti@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
